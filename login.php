@@ -27,13 +27,24 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-    
+
+
+    h4>
+                
+        <div class="row">
+ 
+            <div class="col-lg-5 col-md-12 col-xs-12 col-centered mt-70">
+                <div class="login-panel card card-primary page-container">
+                    <div class="card-heading text-center">
+                        <h4 class="card-title welcome-title">
+                            xLeet <i class="fab fa-redhat"></i> <br /> Welcome Back !
+                        </h4>
+                        <p>We ‘re so excited to see you again !</p>
+                    </div>
+                    <div class="card-body">
+            
+            
             <form class="login" method="post" action="loginform.php">
-            <h4> <b><span class="glyphicon glyphicon-fire"></span> FELUX SHOP - Login</b> </h4>
-            
-            
-            
             
             <?php
                 if(isset($_GET['error'])) {
@@ -46,8 +57,6 @@
 <button type='button' class='close' data-dismiss='alert'>×</button><p>Successfull Registring ! Login Now</div>";
                 }
                   ?>
-                  
-                  
                   
                   
             <input type="text" name="user" placeholder="Username">
