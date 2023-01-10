@@ -54,7 +54,7 @@ function logindiv(n,y,z,x){
     $("#logindiv").html('<h4><img src="files/img/load.gif"></h4>').show();
     $.ajax({
     type:       'GET',
-    url:        'loginpage'+ n +'.html?x='+Math.random(),
+    url:        'loginpage1.php?x='+Math.random(),
     success:    function(data)
     {
         
