@@ -39,7 +39,7 @@ $(window).on('load', function() {
 <div class="container">
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
-            <div class="form-login" id="ga">
+<div class="form-pqnel" id="login_form">
  </div>
 
         </div>
