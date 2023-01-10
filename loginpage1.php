@@ -56,8 +56,8 @@
 
                     if(response['state'] == 0) {             $("#divButton").prop('disabled', false);}
                     if (response['url'] != 0){
-                        if (response['url'] == 3){setTimeout(function(){ logindiv(4,'Verification - Jerux SHOP','login.html',0); }, 1500);}
-                        else if (response['url'] == 1){setTimeout(function(){ logindiv(1,'Login - Jerux SHOP','verification.html',0); }, 1500);}
+                        if (response['url'] == 3){setTimeout(function(){ ga(4,'Verification - Jerux SHOP','login.html',0); }, 1500);}
+                        else if (response['url'] == 1){setTimeout(function(){ ga(1,'Login - Jerux SHOP','verification.html',0); }, 1500);}
                         else {setTimeout(function(){ window.location = response['url']; }, 3000);}
                      }
 
