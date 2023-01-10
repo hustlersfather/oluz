@@ -13,67 +13,56 @@
 <!doctype html>
 <html>
 <link rel="stylesheet" type="text/css" href="files/bootstrap/3/css/bootstrap.css" />
-
-<link rel="stylesheet" type="text/css" href="files/bootstrap/3/css/login.css" />
 <script type="text/javascript" src="files/js/jquery.js"></script>
 <script type="text/javascript" src="files/bootstrap/3/js/bootstrap.js"></script>
+<link rel="stylesheet" href="files/css/login.css">
 
 <link rel="shortcut icon" href="img/favicon.ico" />
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
-<title>Jerux SHOP</title>
-<style>
+<title>Felux-Shop Login</title>
 
-</style>
 
 </head>
 <body>
-<script type="text/javascript">
-
-$(window).on('load', function() {
-        ga(1,'Login - Jerux SHOP','login.html',1);
-});</script>
-<!--Pulling Awesome Font -->
-
 <div class="container">
     <div class="row">
-        <div class="col-md-offset-5 col-md-3">
-<div class="form-pqnel" id="login_form">
- </div>
+    
+            <form class="login" method="post" action="loginform.php">
+            <h4> <b><span class="glyphicon glyphicon-fire"></span> FELUX SHOP - Login</b> </h4>
+            
+            
+            
+            
+            <?php
+                if(isset($_GET['error'])) {
+                 echo $errorbox = "<div class='alert alert-dismissible alert-info'><button type='button' class='close' data-dismiss='alert'>×</button><p>Login failed! Please try again!</p></div>";
+                }
+
+                if (isset($_GET['success']) AND $_GET['success'] == "register") {
+                    echo $errorbox = "<div class='alert alert-dismissible alert-success'>
+                    
+<button type='button' class='close' data-dismiss='alert'>×</button><p>Successfull Registring ! Login Now</div>";
+                }
+                  ?>
+                  
+                  
+                  
+                  
+            <input type="text" name="user" placeholder="Username">
+            <input type="password" name="pass" placeholder="Password">
+            <button type="submit" id="divButton">Login</button> 
+            <button type="button" class="register" onclick="window.location.href = 'signup.html'">Registrer</button>
+            </form>
 
         </div>
     </div>                    
 
 </div>
+
+
 </body>
 </html>
 
-
-<script type="text/javascript">
-function ga(n,y,z,x){
-    $("#ga").html('<h4><img src="files/img/load.gif"></h4>').show();
-    $.ajax({
-    type:       'GET',
-    url:        'loginpage1.php?x='+Math.random(),
-    success:    function(data)
-    {
-        
-        $("#ga").html(data).show();
-        var obj = { Title: y, Url: z };
-        if (x != 1) {
-          history.pushState(obj, obj.Title, obj.Url);
-        }
-        else{
-          history.replaceState(obj, obj.Title, obj.Url);
-        }
-        document.title = y;
-    }});
-}
-$(window).on("popstate", function(e) {
-    if (event.state) {
-        location.replace(document.location);
-    }
-});
-
-</script>
+ 
