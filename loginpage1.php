@@ -17,7 +17,7 @@
     <input type='text' id='user' name='user' class='form-control input-sm chat-input' placeholder='Username' required/>
     <br>
     <input type='password' id='pass' name='pass' class='form-control input-sm chat-input' placeholder='Password' required/>
-    <h6><a onclick="logindiv(3,'Forget - Jerux SHOP','forget.html',0);"  onMouseOver="this.style.cursor='pointer'">[Forgot your password ?]</a></h6>
+    <h6><a onclick="ga(3,'Forget - Jerux SHOP','forget.html',0);"  onMouseOver="this.style.cursor='pointer'">[Forgot your password ?]</a></h6>
 
     <br>
     <div class='wrapper'>
@@ -27,7 +27,7 @@
 <br>
 <br>
 <div class='wrapper'>
-    <button type='button' class='btn btn-default btn-xs' onclick="logindiv(2,'Signup - Jerux SHOP','signup.html',0);">Don`t have an account? Sign Up</button>
+    <button type='button' class='btn btn-default btn-xs' onclick="ga(2,'Signup - Jerux SHOP','signup.html',0);">Don`t have an account? Sign Up</button>
 </div>
 
     
