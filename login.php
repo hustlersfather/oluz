@@ -30,8 +30,9 @@
 </head>
 <body>
 <script type="text/javascript">
+
 $(window).on('load', function() {
-        logindiv(1,'Login - Jerux SHOP','login.html',1);
+        ga(1,'Login - Jerux SHOP','login.html',1);
 });</script>
 <!--Pulling Awesome Font -->
 
@@ -50,15 +51,15 @@ $(window).on('load', function() {
 
 
 <script type="text/javascript">
-function logindiv(n,y,z,x){
-    $("#logindiv").html('<h4><img src="files/img/load.gif"></h4>').show();
+function ga(n,y,z,x){
+    $("#ga").html('<h4><img src="files/img/load.gif"></h4>').show();
     $.ajax({
     type:       'GET',
     url:        'loginpage1.php?x='+Math.random(),
     success:    function(data)
     {
         
-        $("#logindiv").html(data).show();
+        $("#ga").html(data).show();
         var obj = { Title: y, Url: z };
         if (x != 1) {
           history.pushState(obj, obj.Title, obj.Url);
